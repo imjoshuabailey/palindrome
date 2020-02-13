@@ -8,6 +8,3 @@ function isPalindome (userInput) {
     }
     return false;
 }
-
-isPalindome("")
-  
