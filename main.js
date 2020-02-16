@@ -17,17 +17,19 @@ function isPalindrome(userInput) {
 }
 
 
-function testFunc() {
+
+function insertText() {
     const inputField = document.getElementById("input").value;
     
     console.log(inputField)
     const me = isPalindrome(inputField)
-    
+   
     if (me === true) {
         console.log("is palindrome")
-       
+      
     }
     else {
         console.log("not palindrome")
+      
     }
 }
