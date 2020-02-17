@@ -1,21 +1,32 @@
 function isPalindrome(userInput) {
-    let reverseString = ""
 
-    for (let i = userInput.length - 1; i >= 0; i--) {
-        // let lastLetter = userInput.length - 1 - i;
-        // let firstLetter = userInput[1]
-        reverseString += userInput[i]
+    for (let i = 0; i <= userInput.length -1; i++){
+        let lastLetter = userInput[userInput.length -1 -i];
+        let firstLetter = userInput[i];
+        if (lastLetter !== firstLetter) {
+            return false;
+        }
     }
+    return true;
 
-    console.log(reverseString)
+    // let reverseString = ""
 
-    if (userInput === reverseString) {
-        console.log("palindrome tested true")
-        return true;
+    // for (let i = userInput.length - 1; i >= 0; i--) {
+    //     // let lastLetter = userInput.length - 1 - i;
+    //     // let firstLetter = userInput[1]
+    //     reverseString += userInput[i]
+    // }
 
-    }
-    console.log("palindrome tested false")
-    return false;
+
+    // console.log(reverseString)
+
+    // if (userInput === reverseString) {
+    //     console.log("palindrome tested true")
+    //     return true;
+
+    // }
+    // console.log("palindrome tested false")
+    // return false;
 }
 
 
