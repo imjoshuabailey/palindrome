@@ -30,13 +30,16 @@ function isPalindrome(userInput) {
 }
 
 
-function checkInp(userInput)
- {
-    let letters= /^[a-zA-Z]+$/;
+function checkInp(userInput) {
+    let letters = /^[a-zA-Z\s]+$/;
+    let space = /^[ ]+$/;
 
     if (userInput.match(letters)) {
     console.log ("All are Letters");
-    return true;
+    if (userInput.match(space)){
+        return false;
+    }
+    return true
     }
     else{
     console.log("There are non-letters");
@@ -58,7 +61,7 @@ function insertText() {
     let palindromeCheck= "";
 
     if (checking) {
-        palindromeCheck = isPalindrome(inputField)
+        palindromeCheck = isPalindrome(inputField.trim())
     }
     else {
         alert ("Please input alaphabet characters only");
